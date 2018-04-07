@@ -281,6 +281,6 @@ If that appears to be working correctly, you can arrange for automatic renewal b
 certbot renew
 ```
 More detailed information and options about renewal can be found in the full documentation.
-# edx.config-preescolar Luis
+# edx.config-preescolar
 
 
