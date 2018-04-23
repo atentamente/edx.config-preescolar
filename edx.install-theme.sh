@@ -2,7 +2,7 @@
 
 rm -rf edx.config-preescolar
 
-git clone https://github.com/lpm0073/edx.config-preescolar.git
+git clone https://github.com/atentamente/edx.config-preescolar.git
 chown edxapp -R edx.config-preescolar
 chgrp edxapp -R edx.config-preescolar
 
