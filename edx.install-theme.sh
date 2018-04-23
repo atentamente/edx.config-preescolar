@@ -10,6 +10,7 @@ cp /home/ubuntu/edx.config-atentamente/conf/lms.env.json /edx/app/edxapp/lms.env
 cp /home/ubuntu/edx.config-atentamente/conf/lms.auth.json /edx/app/edxapp/lms.auth.json
 cp /home/ubuntu/edx.config-atentamente/conf/cms.env.json /edx/app/edxapp/cms.env.json
 cp /home/ubuntu/edx.config-atentamente/conf/cms.auth.json /edx/app/edxapp/cms.auth.json
+cp /home/ubuntu/edx.config-atentamente/edx/etc/ecommerce.yml /edx/etc/ecommerce.yml
 
 chmod 644 /edx/app/edxapp/*.env.json
 chmod 755 /edx/app/edxapp/*.auth.json
