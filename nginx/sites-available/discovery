@@ -2,7 +2,7 @@
 # This file is created and updated by ansible, edit at your peril
 #
 
-  
+
 upstream discovery_app_server {
     server 127.0.0.1:8381 fail_timeout=0;
 }
@@ -20,12 +20,12 @@ default "null";
 server {
   server_name ~^((stage|prod)-)?discovery.*;
 
-    listen 18381 ssl;
+  listen 18381 ssl;
   ssl_certificate /etc/letsencrypt/live/preescolar.atentamente.mx/fullchain.pem; # managed by Certbot
   ssl_certificate_key /etc/letsencrypt/live/preescolar.atentamente.mx/privkey.pem; # managed by Certbot
   include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
   ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-  
+
   location ~ ^/static/(?P<file>.*) {
     root /edx/var/discovery;
     add_header 'Access-Control-Allow-Origin' $cors_origin;
@@ -42,7 +42,7 @@ server {
   }
 
   location / {
-    
+
     try_files $uri @proxy_to_app;
   }
 
@@ -50,7 +50,7 @@ server {
     try_files $uri @proxy_to_app;
   }
 
-  
+
   location @proxy_to_app {
         proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header X-Forwarded-Port $server_port;
