@@ -11,7 +11,7 @@ server {
 
 server {
   # CMS configuration file for nginx, templated by ansible
-  server_name studio.atentamente.mx
+  server_name preescolar-studio.atentamente.mx
       
   # Proxy to a remote maintanence page
   
@@ -21,8 +21,8 @@ server {
   error_page 500 /server/server-error.html;
   
   listen 443 ssl; # managed by Certbot
-  ssl_certificate /etc/letsencrypt/live/studio.atentamente.mx/fullchain.pem; # managed by Certbot
-  ssl_certificate_key /etc/letsencrypt/live/studio.atentamente.mx/privkey.pem; # managed by Certbot
+  ssl_certificate /etc/letsencrypt/live/preescolar.atentamente.mx/fullchain.pem; # managed by Certbot
+  ssl_certificate_key /etc/letsencrypt/live/preescolar.atentamente.mx/privkey.pem; # managed by Certbot
   include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
   ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
@@ -148,4 +148,6 @@ server_tokens off;
     #     return 301 https://$host$request_uri;
     # } # managed by Certbot
 
+
 }
+
