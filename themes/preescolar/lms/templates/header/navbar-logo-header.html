@@ -13,6 +13,11 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from branding import api as branding_api
 %>
 <style>
+
+.course-name{
+   color:#FFFFFF !important;
+}
+
   #logo-small-left {
     float: left;
     left:0;
@@ -30,7 +35,7 @@ from branding import api as branding_api
     top:0;
     margin-top: 10px;
   }
-
+/*
   @media (min-width: 525px) and (max-width: 991px) {
     #logo-small-right {
       visibility: visible;
@@ -55,7 +60,7 @@ from branding import api as branding_api
       height: auto !important;
       width: 200px !important;
     }
-  }
+  }*/
 </style>
 <h1 class="header-logo">
   <a href="/">
@@ -63,9 +68,7 @@ from branding import api as branding_api
     ## This is the default site logo: "Lideres Educativos - Fundacion Banorte"
     <img id="logo-large-left" class="logo" src="${branding_api.get_logo_url(is_secure)}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
 
-    ##Responsive styling: these are reduced-size logos for both Banorte and Atentamente
-    <img id="logo-small-left" src="${static.url("images/logo_lideres_educativos-stacked.png")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-    <img id="logo-small-right" src="${static.url("images/logo-atentamente.png")}" alt="Atentamente logo" />
+    
     </%block>
   </a>
   % if course:
