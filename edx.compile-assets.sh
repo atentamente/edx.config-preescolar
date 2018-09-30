@@ -9,5 +9,6 @@ paver update_assets cms --settings=aws
 EOF
 
 # restart edx instances
-sudo /edx/bin/supervisorctl restart edxapp:
+sudo /edx/bin/supervisorctl restart lms
+sudo /edx/bin/supervisorctl restart cms
 /edx/bin/supervisorctl restart edxapp_worker:

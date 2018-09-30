@@ -19,7 +19,7 @@ python /edx/app/edxapp/edx-platform/manage.py cms migrate --settings=aws
 EOF
 
 # edX Notes migrations
-export EDXNOTES_CONFIG_ROOT=/edx/etc/
-export DB_MIGRATION_USER=
-export DB_MIGRATION_PASS=
-/edx/bin/python.edx_notes_api /edx/bin/manage.edx_notes_api migrate --settings="notesserver.settings.yaml_config"
+#export EDXNOTES_CONFIG_ROOT=/edx/etc/
+#export DB_MIGRATION_USER=
+#export DB_MIGRATION_PASS=
+#/edx/bin/python.edx_notes_api /edx/bin/manage.edx_notes_api migrate --settings="notesserver.settings.yaml_config"

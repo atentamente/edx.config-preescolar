@@ -10,7 +10,9 @@ cp /home/ubuntu/edx.config-preescolar/conf/lms.env.json /edx/app/edxapp/lms.env.
 cp /home/ubuntu/edx.config-preescolar/conf/lms.auth.json /edx/app/edxapp/lms.auth.json
 cp /home/ubuntu/edx.config-preescolar/conf/cms.env.json /edx/app/edxapp/cms.env.json
 cp /home/ubuntu/edx.config-preescolar/conf/cms.auth.json /edx/app/edxapp/cms.auth.json
-cp /home/ubuntu/edx.config-preescolar/conf/ecommerce.yml /edx/etc/ecommerce.yml
+#cp /home/ubuntu/edx.config-preescolar/conf/ecommerce.yml /edx/etc/ecommerce.yml
 
 chmod 644 /edx/app/edxapp/*.env.json
 chmod 755 /edx/app/edxapp/*.auth.json
+
+./edx.platform-restart.sh
